@@ -10,6 +10,9 @@
 <h1>Structural Directives</h1>
 <h2>*ngIf</h2>
 <div *ngIf="switch">Conditinal Text</div>
+<template [ngIf]="switch">
+    <div>Conditinal Text</div>
+</template>
 <button (click)="onSwitch()">Switch</button>
 <hr>
 <h2>*ngFor</h2>
@@ -24,5 +27,8 @@
   <p *ngSwitchCase="110">110</p>
   <p *ngSwitchDefault>Default</p>
 </div>
+<hr>
+<h2>UnlessDirective</h2>
+<div *unless="switch">Conditional Text</div>
 
 <br><br><br><br><br><br><br><br><br>
