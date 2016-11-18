@@ -12,6 +12,11 @@ export class HighlightDirective {
   @HostListener('mouseleave') mouseleave() {
     this.backgroundColor = 'white';
   }
+
+  @HostListener('click', ['$event']) onclick(event) {
+    console.log('Evenet target : ' + event.target);
+    this.backgroundColor = 'blue';
+  }
   
   @HostBinding('style.backgroundColor') get setColor() {
     return this.backgroundColor;
